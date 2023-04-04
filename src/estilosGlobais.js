@@ -1,4 +1,4 @@
-const tema = {
+const escuro = {
   fundo: '#051933',
   titulo: '#FFFFFF',
   texto: '#FFFFFF',
@@ -10,4 +10,16 @@ const tema = {
   input: '#FFFFFF',
 }
 
-export { tema };
+const claro = {
+  fundo: '#FFFFFF',
+  titulo: '#051933',
+  texto: '#000000',
+  branco: '#000000',
+  preto: '#FFFFFF',
+  cinza: '#EBEBEB',
+  ultimosVistos: '#CCEFFF',
+  botao: '#2A663C',
+  input: '#0B2A52',
+}
+
+export { escuro, claro };
