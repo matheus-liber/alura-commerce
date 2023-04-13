@@ -9,64 +9,28 @@ export const estilos = (tema) => {
       alignItems: 'stretch',
       justifyContent: 'center',
     },
-    tituloArea: {
-      width: '100%',
-      alignItems: 'center',
-      justifyContent: 'space-around',
-      flexDirection: 'row',
-      paddingTop: Constants.statusBarHeight,
-      marginBottom: 16,
+    containerView: {
+      flex: 1,
+    },
+    containerInfo: {
+      backgroundColor: '#093245',
+      margin: 10,
+      padding: 10,
+      borderRadius: 10,
+    },
+    containerResumo: {
+      padding: 10,
     },
     titulo: {
-      fontSize: 20,
+      fontSize: 25,
       fontWeight: 'bold',
       color: tema.titulo,
+      paddingVertical: 8
     },
     lista: {
-      flex: 1,
-      width: '100%',
-    },
-    ultimosVistos: {
-      marginBottom: 16,
-      paddingVertical: 16,
-      backgroundColor: tema.ultimosVistos,
-    },
-    tituloUltimosVistos: {
       fontSize: 18,
-      fontWeight: 'bold',
       color: tema.titulo,
-      marginHorizontal: 16,
-      marginBottom: 8,
-    },
-    carrinhoArea: {
-      flexDirection: 'row',
-      alignItems: 'flex-end',
-      justifyContent: 'flex-end',
-    },
-    carrinhoIcon: {
-      fontSize: 30,
-      fontWeight: 'bold',
-      color: tema.titulo,
-    },
-    carrinhoQuantidadeArea: {
-      backgroundColor: 'red',
-      borderRadius: 10,
-      width: 20,
-      height: 20,
-      alignItems: 'center',
-      justifyContent: 'center',
-    },
-    carrinhoQuantidade: {
-      fontSize: 12,
-      fontWeight: 'bold',
-      color: "#fff",
-    },
-    iconArea: {
-      marginLeft: 16,
-    },
-    icon: {
-      color: tema.texto,
-      fontSize: 30,
+      paddingVertical: 5
     },
     botao: {
       margin: 16,

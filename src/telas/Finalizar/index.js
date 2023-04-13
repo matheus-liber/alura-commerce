@@ -21,7 +21,19 @@ export default function Finalizar({navigation}) {
   return (
     <View style={estilo.container}>
       <StatusBar />
-    
+      <View style={estilo.containerView}>
+        <View style={estilo.containerInfo}>
+          <Text style={estilo.titulo}>Informações de Entrega</Text>
+          <Text style={estilo.lista}>Nome: {usuario.nome}</Text>
+          <Text style={estilo.lista}>Endereço: {usuario.endereco}</Text>
+          <Text style={estilo.lista}>Email: {usuario.email}</Text>
+          <Text style={estilo.lista}>Telefone: {usuario.telefone}</Text>
+        </View>
+        <View style={estilo.containerResumo}>
+          <Text style={estilo.lista}>Quantidade: {quantidade}</Text>
+          <Text style={estilo.lista}>Preço Total: R$ {carrinho.reduce((total, produto) => total + produto.preco, 0)}</Text>
+        </View>
+      </View>
       <TouchableOpacity 
         style={estilo.botao} 
         onPress={() => navigation.navigate('Principal')}

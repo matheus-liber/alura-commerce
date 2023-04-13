@@ -4,7 +4,7 @@ export const estilos = (tema) => {
   return StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: tema.fundo,
+      backgroundColor: 'tema.fundo',
       alignItems: 'center',
       justifyContent: 'center',
     },
