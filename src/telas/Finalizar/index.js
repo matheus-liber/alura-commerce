@@ -1,4 +1,4 @@
-import { Text, View, FlatList, StatusBar, TouchableOpacity } from 'react-native';
+import { Text, View, FlatList, StatusBar, TouchableOpacity, Alert } from 'react-native';
 import { Produto } from '../../componentes/Produto';
 import { estilos } from './estilos';
 import { Feather } from 'react-native-vector-icons'
@@ -16,7 +16,14 @@ export default function Finalizar({navigation}) {
 
   const { usuario } = useContext(AutenticacaoContext)
 
-  const { quantidade, carrinho } = useContext(ProdutosContext)
+  const { quantidade, carrinho, finalizaCompra } = useContext(ProdutosContext)
+
+  async function botaoPressionado() {
+    const resultado = await finalizaCompra()
+    Alert.alert(resultado);
+    navigation.navigate('Principal');
+    
+  }
 
   return (
     <View style={estilo.container}>
@@ -36,7 +43,7 @@ export default function Finalizar({navigation}) {
       </View>
       <TouchableOpacity 
         style={estilo.botao} 
-        onPress={() => navigation.navigate('Principal')}
+        onPress={() => botaoPressionado()}
       >
         <Text style={estilo.botaoTexto}>Finalizar</Text>
       </TouchableOpacity>

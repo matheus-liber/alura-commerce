@@ -1,8 +1,6 @@
 import { StyleSheet } from 'react-native';
 import Constants from 'expo-constants';
 
-//comentário
-
 export const estilos = (tema) => { 
   return StyleSheet.create({
     container: {

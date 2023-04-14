@@ -21,3 +21,14 @@ export async function pegarProdutos() {
         return []
     }
 }
+
+export async function removerProduto(produto){
+    try {
+        await api.delete(`/produtos/${produto.id}`);
+        return 'sucesso'
+    }
+    catch (error){
+        console.log(error)
+        return 'erro'
+    }
+}
